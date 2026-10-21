@@ -13,3 +13,11 @@ def health():
 @app.get("/version")
 def version():
     return {"version": "1.0.0"}
+
+@app.get("/info")
+def app_info():
+    return {
+        "application": "CI/CD Automation Project",
+        "platform": "FastAPI",
+        "status": "running"
+    }
